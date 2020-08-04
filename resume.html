@@ -4,15 +4,24 @@
         <meta charset='UTF-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Steve Kang</title>
+        <link rel="stylesheet" type="text/css" href="./dist/css/main.css">
+
     </head>
+
     <body>
+      <header>
+        <span class="logo">My WebSite</span>
+  
+        <a id="toggleMenu">Menu<a>
+  
         <nav>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-          </nav>
+        </nav>
+    </header>
 
           <h1>Steve Kang</h1>
           <div>
@@ -21,5 +30,20 @@
             &#x25CF;
             Lincolnshire, IL
           </div>
+
+          <script>
+            var toggleMenu = document.getElementById('toggleMenu');
+            var nav = document.querySelector('nav');
+            toggleMenu.addEventListener(
+              'click',
+              function(){
+                if(nav.style.display=='block'){
+                  nav.style.display='none';
+                }else{
+                  nav.style.display='block';
+                }
+              }
+            );
+          </script>
     </body>
 </html>
